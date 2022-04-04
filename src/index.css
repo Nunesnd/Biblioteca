@@ -13,14 +13,15 @@ body {
   padding: 10px 5px;
   border-bottom: 1px solid #ccc;
 }
+
 thead > tr:last-child {
   text-align: left;
 }
 thead > tr:first-child {
-  background: #d1fafd;
+  background: #1be1f0;
 }
 tbody > tr:nth-child(2n-1) {
-  background: #f1f1f1;
+  background: #d4f7fa;
 }
 tfoot > tr {
   text-align: center;
@@ -64,11 +65,11 @@ tfoot > tr {
 }
 
 .container-setinhas{
-  display: inline-block;
+  display: inline;
   width: 20px;
   height: 40px;
   margin-left: 10px;
-  vertical-align: middle;
+  
 }
 
 .container-setinhas > div{cursor: pointer;}

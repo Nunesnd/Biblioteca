@@ -36,11 +36,23 @@ class App extends Component{
     this.setState({livros});
   };
 
+  handleOrdemIsbnCrescente = id => {
+    const livros = this.state.livros.sort((a, b) => a.id < b.id ? -1 : 0); 
+    this.setState({livros});
+  }
+  handleOrdemIsbnDecrescente = id => {
+    const livros = this.state.livros.sort((a, b) => a.titulo < b.titulo ? -1 : 0); 
+    livros.reverse();
+    this.setState({livros});
+  };
+
 
   render() {
     return(
       <table className="tabela">
         <TabelaHead
+          ordemIsbnCrescente={this.handleOrdemIsbnCrescente}
+          ordemIsbnDecrescente={this.handleOrdemIsbnDecrescente}
           ordenarCrescente={this.handleOrdenarCrescente}
           ordenarDecrescente={this.handleOrdenarDecrescente}        
         />
